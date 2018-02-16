@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.beket.businesscard.MainActivity"
+    android:background="@android:color/white">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/udacity_text_view"
+                android:layout_height="wrap_content"
+                android:text="@string/business_name" />
+
+            <ImageView
+                style="@style/udacity_image_view"
+                android:src="@drawable/udacity2" />
+
+            <LinearLayout
+                android:onClick="dialPhoneNumber"
+                style="@style/nested_linear_layout">
+
+                <ImageView
+                    style="@style/icon_image_view"
+                    android:src="@drawable/phone_icon" />
+
+                <TextView
+                    android:text="@string/business_phone_number"
+                    style="@style/information_text_view"/>
+            </LinearLayout>
+
+            <View
+                style="@style/view"/>
+
+            <LinearLayout
+                android:onClick="sendEmail"
+                style="@style/nested_linear_layout">
+
+                <ImageView
+                    style="@style/icon_image_view"
+                    android:src="@drawable/email_icon" />
+
+                <TextView
+                    android:text="@string/business_email_address"
+                    style="@style/information_text_view" />
+            </LinearLayout>
+
+            <View
+                style="@style/view"/>
+
+            <LinearLayout
+                android:onClick="openWebPage"
+                style="@style/nested_linear_layout">
+
+                <ImageView
+                    style="@style/icon_image_view"
+                    android:src="@drawable/web_icon" />
+
+                <TextView
+                    android:text="@string/business_web_address"
+                    style="@style/information_text_view"/>
+            </LinearLayout>
+
+            <View
+                style="@style/view" />
+
+            <LinearLayout
+                android:onClick="openMaps"
+                style="@style/nested_linear_layout">
+
+                <ImageView
+                    style="@style/icon_image_view"
+                    android:src="@drawable/location_icon" />
+
+                <TextView
+                    android:text="@string/business_address"
+                    style="@style/information_text_view" />
+            </LinearLayout>
+
+            <View
+                style="@style/view"/>
+
+            <LinearLayout
+                style="@style/nested_linear_layout">
+
+                <ImageView
+                    style="@style/icon_image_view"
+                    android:src="@drawable/information_icon" />
+
+                <TextView
+                    android:text="@string/business_information"
+                    style="@style/information_text_view" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</ScrollView>

@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">BusinessCard</string>
+    <string name="business_name">Udacity</string>
+    <string name="business_phone_number">650-555-5555</string>
+    <string name="business_email_address">support@udacity.com</string>
+    <string name="business_web_address">http://www.udacity.com</string>
+    <string name="business_address">2465 Latham St. Mountain View,\nCA 94043</string>
+    <string name="business_information">Udacity is where lifelong learners come to learn the skills they need, to land the jobs they want, to build the lives they deserve.</string>
+</resources>
