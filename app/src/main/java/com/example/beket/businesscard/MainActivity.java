@@ -2,9 +2,11 @@ package com.example.beket.businesscard;
 
 import android.content.Intent;
 import android.net.Uri;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -19,10 +21,12 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        ButterKnife.bind(this);
     }
 
     // dial phone number
-    public void dialPhoneNumber(View v) {
+    @OnClick(R.id.phone_number_view)
+    public void dialPhoneNumber() {
         Intent dialIntent = new Intent(Intent.ACTION_DIAL);
         dialIntent.setData(Uri.parse("tel:" + phoneNumber));
         if (dialIntent.resolveActivity(getPackageManager()) != null) {
@@ -31,7 +35,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     // send email
-    public void sendEmail(View v){
+    @OnClick(R.id.email_view)
+    public void sendEmail(View v) {
         Intent emailIntent = new Intent(Intent.ACTION_SENDTO);
         emailIntent.setData(Uri.parse("mailto:" + emailAddress));
         if (emailIntent.resolveActivity(getPackageManager()) != null) {
@@ -40,7 +45,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     // open web page
-    public void openWebPage(View v){
+    @OnClick(R.id.web_page_view)
+    public void openWebPage(View v) {
         Intent webIntent = new Intent(Intent.ACTION_VIEW);
         webIntent.setData(Uri.parse(webPageAddress));
         if (webIntent.resolveActivity(getPackageManager()) != null) {
@@ -49,8 +55,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     // open map for location
-    public void openMaps(View v){
-        Intent mapsIntent = new Intent(Intent.ACTION_VIEW );
+    @OnClick(R.id.address_view)
+    public void openMaps(View v) {
+        Intent mapsIntent = new Intent(Intent.ACTION_VIEW);
         mapsIntent.setData(Uri.parse("geo:" + latitude + "," + longitude));
         startActivity(mapsIntent);
     }

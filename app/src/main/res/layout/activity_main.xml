@@ -27,7 +27,7 @@
                 android:src="@drawable/udacity2" />
 
             <LinearLayout
-                android:onClick="dialPhoneNumber"
+                android:id="@+id/phone_number_view"
                 style="@style/nested_linear_layout">
 
                 <ImageView
@@ -43,7 +43,7 @@
                 style="@style/view"/>
 
             <LinearLayout
-                android:onClick="sendEmail"
+                android:id="@+id/email_view"
                 style="@style/nested_linear_layout">
 
                 <ImageView
@@ -59,7 +59,7 @@
                 style="@style/view"/>
 
             <LinearLayout
-                android:onClick="openWebPage"
+                android:id="@+id/web_page_view"
                 style="@style/nested_linear_layout">
 
                 <ImageView
@@ -75,7 +75,7 @@
                 style="@style/view" />
 
             <LinearLayout
-                android:onClick="openMaps"
+                android:id="@+id/address_view"
                 style="@style/nested_linear_layout">
 
                 <ImageView
